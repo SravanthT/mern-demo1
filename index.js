@@ -10,7 +10,7 @@ const port = process.env.PORT || 1234;
 app.use(cors());
 app.use(bodyParser.json());
 
-app.all("/*", (req,res)=>{
+app.all("/api/*", (req,res)=>{
     res.send(`You are in page ${req.url}`)
 })
 
